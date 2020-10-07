@@ -134,5 +134,23 @@ Summary:
     - The two values of software: primary is keep it flexible
     - Carefully allocating responsibility to classes and modules is one of the ways we keep the primary value of software high
     - When modules contain more than one responsibility, the system becomes fragile
-    
 
+
+### Open-Closed Principle
+- Open to extension, closed to modification
+- Should be easy to change the behaviour of a module, without having to change the source code of that module 
+- If you design your code to open-closed principle, then when you modify them you'll do so by adding new code instead of changing old code ... the old code should theoretically never need modification again!
+    - Except perhaps ``Main()``
+    - The crystal ball problem... we cannot completely conform to it, but should aim for it. Functions, classes, small components should conform to it. 
+- Issues with this is that you don't have a crystal ball, so you dont know the new features or changes the customers will request. 
+    - Solutions:
+        - BDUF (big design up front) - you think really hard about everything the customer may want
+            - but creates large top-heavy designs littered with designs 
+            - abstractions are expensive, make it hard to follow from cause to effect 
+            - when we need abstractions, the cost is bearable. but when theyre anticipatory, the cost is overwhelming
+        - Agile design
+            - do the simplest thing you possibly can, get it out in front of the customer as soon as possible - then the customer starts shooting at it with change requests, and then you know what change requests are likely
+            - wait for the customer to request a change, then make an abstraction that will prevent any further change to that feature in the future, as the best predictor of change is past-change 
+
+
+### Liskov Substitution Principle
